@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>progress bar</title>
+    <script>
+    function loader(){
+        var prog=document.getElementById("vcet");
+       let nve=0;
+       var c=document.getElementsByName("stud");
+       for(i=0;i<c.length;i++)
+       {
+        if(c[i].validity.valid)
+        nve++;
+       }
+       prog.value=nve*20;
+    } 
+    </script>
+</head>
+<body>
+    <h1 onclick="loader()">Click Here</h1>
+    
+    <form>
+        Name:
+        <input type="text" required name="stud" onchange="loader();">
+        <br>
+        dob:
+        <input type="date" required name="stud" onchange="loader();">
+        <br>
+        Email:
+        <input type="email" required name="stud" onchange="loader();">
+        <br>
+        PNO:
+        <input type="number" pattern="[0-9]" name="stud" onchange="loader();" >
+        <br>
+        City:
+        <input type="text" required name="stud" onchange="loader();">
+    </form>
+    <progress value="0" max="100" id="vcet"></progress>
+</body>
+</html>
