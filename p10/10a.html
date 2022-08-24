@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10A</title>
+    <script src="jquery-3.6.0 (copy).js"></script>
+    <script>
+        $(function (){
+            var ml=$("textarea").attr('maxlength');
+            $("span").text(ml);
+            $("textarea").keyup(function(){
+                var nc =$(this).val().length;
+                $("#rc").text(ml-nc);
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <p>You Can Enter Max 10 Char</p>
+    <textarea id="" maxlength="10"></textarea>
+    <p>remaining <span id="rc">10</span> char</p>
+</body>
+</html>
